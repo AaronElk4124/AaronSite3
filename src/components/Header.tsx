@@ -21,6 +21,7 @@ export const Header = () => {
         <Image src={ComputerIcon} alt="Computer" />
       </Box>
       <Link href="/">Philanthropy</Link>
+      <Link href="/">Hello</Link>
     </Stack>
   );
 };
