@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Metadata } from "next";
-import { Box, Container } from "@mui/material";
-import { Header } from "@/components/Header";
+import { Container } from "@mui/material";
+import { Header } from "@/components/Header/Header";
 
 export const metadata: Metadata = {
   title: "Aaron Elkin",
@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
       <body style={{ background: "ghostwhite", margin: 0 }}>
         <Header />
         <Container sx={{ maxWidth: "1400px" }}>{children}</Container>
-        <script src="vanilla-tilt.js" />
       </body>
     </html>
   );

@@ -1,12 +1,31 @@
 .specialButton {
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.5s ease;
   &:hover {
     color: crimson;
-    background: whitesmoke;
+    background: #d4d4c7;
   }
 }
 
-.tilt-image {
-  transition: transform 0.3s ease;
-  perspective: 1000px;
-  transform: perspective(1000px);
+.tilt {
+  transition: transform 0.2s ease-out;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.card1 {
+  grid-area: 1 / 2 / 5 / 5;
+}
+.card2 {
+  grid-area: 1 / 1 / 5 / 2;
+}
+.card3 {
+  grid-area: 1 / 5 / 5 / 6;
 }
