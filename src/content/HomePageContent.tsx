@@ -21,7 +21,7 @@ export const HomePageContent = () => {
       sx={{
         alignItems: "center",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: ["center", "center"],
       }}
     >
       <CardOne />
