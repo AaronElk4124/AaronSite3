@@ -1,0 +1,12 @@
+.specialButton {
+  &:hover {
+    color: crimson;
+    background: whitesmoke;
+  }
+}
+
+.tilt-image {
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  transform: perspective(1000px);
+}
