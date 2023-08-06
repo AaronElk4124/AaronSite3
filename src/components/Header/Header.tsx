@@ -1,9 +1,9 @@
 "use client";
-import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import ComputerIcon from "@/icons/ComputerIcon.svg";
-import { bebasNeue, robotoMono } from "theme/fonts";
-import "./Header.css";
+import { bebasNeue, robotoMono } from "@/theme/fonts";
+import "../Header.css";
 import { map as _map } from "lodash";
 
 const linkArray = [
@@ -24,15 +24,14 @@ const linkArray = [
     href: "/",
   },
 ];
+
 export const Header = () => {
   return (
-    <header>
+    <header style={{ position: "sticky", top: 0 }}>
       <Stack
         sx={{
           as: "head",
           height: "100px",
-          position: "sticky",
-          top: 0,
           background: "white",
           maxWidth: "100vw",
           boxShadow: "black",
@@ -40,7 +39,7 @@ export const Header = () => {
           alignItems: "center",
           px: "20px",
           justifyContent: "space-between",
-          zIndex: "1000",
+          zIndex: "2000",
           borderBottom: "2px solid black",
           mb: "20px",
         }}
