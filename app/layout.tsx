@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ background: "ghostwhite", margin: 0 }}>
+      <body style={{ background: "#1A1A1A", margin: 0 }}>
         <Header />
         <Container sx={{ maxWidth: "1400px" }}>{children}</Container>
       </body>

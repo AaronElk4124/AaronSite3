@@ -32,7 +32,6 @@ export const Header = () => {
         sx={{
           as: "head",
           height: "100px",
-          background: "white",
           maxWidth: "100vw",
           boxShadow: "black",
           flexDirection: "row",
@@ -42,6 +41,7 @@ export const Header = () => {
           zIndex: "2000",
           borderBottom: "2px solid black",
           mb: "20px",
+          background: "#38383B",
         }}
       >
         <Stack

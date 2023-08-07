@@ -2,19 +2,25 @@ import { Card, CardContent, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import { robotoMono } from "@/theme/fonts";
 
-export const CardOne = () => {
-  const [hoverColor, setHoverColor] = useState("#83B799");
+type CardInfo = {
+  title: string;
+  description: string;
+  card: string;
+  hoverColor: string;
+};
+export const CustomCard = (props: CardInfo) => {
+  const [hoverColor, setHoverColor] = useState("#272324");
 
   const onCardOneHover = () => {
-    setHoverColor("#272324");
+    setHoverColor(props.hoverColor);
   };
   const onCardOneLeave = () => {
-    setHoverColor("#83B799");
+    setHoverColor("#272324");
   };
   return (
     <Card
       variant="outlined"
-      className="card2"
+      className={props.card}
       sx={{
         background: hoverColor,
         transition: "background 1s ease",
@@ -27,19 +33,23 @@ export const CardOne = () => {
       <CardContent>
         <Button
           href={"/"}
-          onMouseEnter={onCardOneHover}
-          onMouseLeave={onCardOneLeave}
           sx={{
             "& .MuiTouchRipple-root": {
               color: "red",
+              transitionDuration: "1s",
+            },
+            "&:hover": {
+              background: "none",
             },
           }}
         >
           <Typography
             sx={{ fontFamily: robotoMono.style.fontFamily }}
-            className="specialButton"
+            className={`${props.card}-button`}
+            onMouseEnter={onCardOneHover}
+            onMouseLeave={onCardOneLeave}
           >
-            Philanthropy
+            {props.title}
           </Typography>
         </Button>
         <Typography
@@ -49,8 +59,7 @@ export const CardOne = () => {
             lineHeight: 2,
           }}
         >
-          Learn More About Aaron's involvement with charity work throughout
-          Michigan State
+          {props.description}
         </Typography>
       </CardContent>
     </Card>
