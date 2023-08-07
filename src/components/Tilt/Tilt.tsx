@@ -34,7 +34,7 @@ export const Tilt = (props: Props) => {
   }, []);
 
   return (
-    <Box ref={tiltRef} className="tilt">
+    <Box ref={tiltRef} className="tilt" sx={{ zIndex: "1000" }}>
       {props.children}
     </Box>
   );
