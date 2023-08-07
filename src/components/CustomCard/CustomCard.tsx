@@ -28,6 +28,7 @@ export const CustomCard = (props: CardInfo) => {
         borderRadius: "10%",
         maxWidth: "300px",
         maxHeight: "300px",
+        mb: ["20px", 0],
       }}
     >
       <CardContent>

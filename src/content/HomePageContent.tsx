@@ -17,37 +17,17 @@ import { CustomCard } from "@/components/CustomCard/CustomCard";
 export const HomePageContent = () => {
   return (
     <Stack
-      className="parent"
       sx={{
         alignItems: "center",
-        flexDirection: "row",
         justifyContent: "center",
+        display: ["flex", "grid"],
+        flexDirection: "column",
+        gridTemplateColumns: "repeat(5, 1fr)",
+        gridTemplateRows: "repeat(5, 1fr)",
+        gridColumnGap: 0,
+        gridRowGap: 0,
       }}
     >
-      <CustomCard
-        title="Philanthropy"
-        description="Learn More About Aaron's involvement with charity work throughout Michigan State"
-        card="card2"
-        hoverColor="#1D4600"
-      />
-      <CustomCard
-        title="About Me"
-        description="Learn More About Aaron and his interests/background"
-        card="card3"
-        hoverColor="#1672F9"
-      />
-      <CustomCard
-        title="Philanthropy"
-        description="Learn More About Aaron's involvement with charity work throughout Michigan State"
-        card="card4"
-        hoverColor="#1D4600"
-      />
-      <CustomCard
-        title="About Me"
-        description="Learn More About Aaron and his interests/background"
-        card="card5"
-        hoverColor="#1672F9"
-      />
       <Stack
         className="card1"
         sx={{
@@ -58,7 +38,7 @@ export const HomePageContent = () => {
         <Typography
           sx={{
             fontFamily: robotoMono.style.fontFamily,
-            fontSize: "30px",
+            fontSize: ["larger", "30px"],
             color: "steelblue",
             mb: "20px",
           }}
@@ -82,11 +62,36 @@ export const HomePageContent = () => {
               src={Aaron}
               alt="Aaron"
               className="tilt-image"
+              loading="lazy"
               style={{ maxHeight: "450px", width: "auto", borderRadius: "50%" }}
             />
           </Box>
         </Tilt>
       </Stack>
+      <CustomCard
+        title="Philanthropy"
+        description="Learn More About Aaron's involvement with charity work throughout Michigan State"
+        card="card2"
+        hoverColor="#4F9900"
+      />
+      <CustomCard
+        title="About Me"
+        description="Learn More About Aaron and his interests/background"
+        card="card3"
+        hoverColor="#1672F9"
+      />
+      <CustomCard
+        title="Education"
+        description="Learn More About Aaron's Education through public school and university"
+        card="card4"
+        hoverColor="#CF3D00"
+      />
+      <CustomCard
+        title="Hobbies"
+        description="Learn More About Aaron's Personal Activities"
+        card="card5"
+        hoverColor="#572D8A"
+      />
     </Stack>
   );
 };

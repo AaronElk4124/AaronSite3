@@ -1,29 +1,10 @@
 "use client";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import ComputerIcon from "@/icons/ComputerIcon.svg";
-import { bebasNeue, robotoMono } from "@/theme/fonts";
+import { bebasNeue } from "@/theme/fonts";
 import "../Header.css";
 import { map as _map } from "lodash";
-
-const linkArray = [
-  {
-    title: "Philanthropy",
-    href: "/",
-  },
-  {
-    title: "About Me",
-    href: "/",
-  },
-  {
-    title: "Education",
-    href: "/",
-  },
-  {
-    title: "Hobbies",
-    href: "/",
-  },
-];
 
 export const Header = () => {
   return (
@@ -37,49 +18,31 @@ export const Header = () => {
           flexDirection: "row",
           alignItems: "center",
           px: "20px",
-          justifyContent: "space-between",
+          justifyContent: "center",
           zIndex: "2000",
           borderBottom: "2px solid black",
           mb: "20px",
           background: "#38383B",
         }}
       >
-        <Stack
+        <Box sx={{ width: "60px", height: "60px" }}>
+          <Image src={ComputerIcon} alt="Computer" loading="lazy" />
+        </Box>
+        <Typography
           sx={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            width: "100%",
-            maxWidth: "200px",
-            alignItems: "center",
+            textTransform: "uppercase",
+            fontFamily: bebasNeue.style.fontFamily,
+            fontSize: ["larger", "30px"],
+            textAlign: "center",
+            color: "#83B799",
+            mx: "20px",
           }}
         >
-          <Box sx={{ width: "60px", height: "60px" }}>
-            <Image src={ComputerIcon} alt="Computer" />
-          </Box>
-          <Typography
-            sx={{
-              textTransform: "uppercase",
-              fontFamily: bebasNeue.style.fontFamily,
-              fontSize: "30px",
-              background: "linear-gradient(to right, #121FCF 0%, #CF1512 100%)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            Aaron Elkin
-          </Typography>
-        </Stack>
-        <Box>
-          {_map(linkArray, (linkInfo, i) => {
-            return (
-              <Button className="specialButton" href={linkInfo.href} key={i}>
-                <Typography sx={{ fontFamily: robotoMono.style.fontFamily }}>
-                  {linkInfo.title}
-                </Typography>
-              </Button>
-            );
-          })}
+          Aaron Elkin - Computer and Electrical Engineering Student at Michigan
+          State University
+        </Typography>
+        <Box sx={{ width: "60px", height: "60px" }}>
+          <Image src={ComputerIcon} alt="Computer" loading="lazy" />
         </Box>
       </Stack>
     </header>
