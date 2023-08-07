@@ -12,7 +12,7 @@ import Aaron from "@/images/AaronElkinSenior Pic.jpg";
 import { robotoMono } from "@/theme/fonts";
 import { Tilt } from "@/components/Tilt/Tilt";
 import "../components/Header.css";
-import { CardOne } from "@/components/CardOne/CardOne";
+import { CustomCard } from "@/components/CustomCard/CustomCard";
 
 export const HomePageContent = () => {
   return (
@@ -24,7 +24,30 @@ export const HomePageContent = () => {
         justifyContent: "center",
       }}
     >
-      <CardOne />
+      <CustomCard
+        title="Philanthropy"
+        description="Learn More About Aaron's involvement with charity work throughout Michigan State"
+        card="card2"
+        hoverColor="#1D4600"
+      />
+      <CustomCard
+        title="About Me"
+        description="Learn More About Aaron and his interests/background"
+        card="card3"
+        hoverColor="#1672F9"
+      />
+      <CustomCard
+        title="Philanthropy"
+        description="Learn More About Aaron's involvement with charity work throughout Michigan State"
+        card="card4"
+        hoverColor="#1D4600"
+      />
+      <CustomCard
+        title="About Me"
+        description="Learn More About Aaron and his interests/background"
+        card="card5"
+        hoverColor="#1672F9"
+      />
       <Stack
         className="card1"
         sx={{
@@ -64,7 +87,6 @@ export const HomePageContent = () => {
           </Box>
         </Tilt>
       </Stack>
-      <Card className="card3">About Me</Card>
     </Stack>
   );
 };
