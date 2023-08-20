@@ -7,6 +7,7 @@ type CardInfo = {
   description: string;
   card: string;
   hoverColor: string;
+  href: string;
 };
 export const CustomCard = (props: CardInfo) => {
   const [hoverColor, setHoverColor] = useState("#272324");
@@ -14,9 +15,11 @@ export const CustomCard = (props: CardInfo) => {
   const onCardOneHover = () => {
     setHoverColor(props.hoverColor);
   };
+
   const onCardOneLeave = () => {
     setHoverColor("#272324");
   };
+
   return (
     <Card
       variant="outlined"
@@ -33,7 +36,7 @@ export const CustomCard = (props: CardInfo) => {
     >
       <CardContent>
         <Button
-          href={"/"}
+          href={props.href}
           sx={{
             "& .MuiTouchRipple-root": {
               color: "red",
