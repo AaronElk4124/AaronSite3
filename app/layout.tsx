@@ -3,6 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 import { Container } from "@mui/material";
 import { Header } from "@/components/Header/Header";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Aaron Elkin",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body style={{ background: "#1A1A1A", margin: 0 }}>
         <Header />
         <Container sx={{ maxWidth: "1400px" }}>{children}</Container>
+        <Analytics />
       </body>
     </html>
   );
