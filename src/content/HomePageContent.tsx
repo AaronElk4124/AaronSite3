@@ -26,6 +26,7 @@ export const HomePageContent = () => {
         gridTemplateRows: "repeat(5, 1fr)",
         gridColumnGap: 0,
         gridRowGap: 0,
+       
       }}
     >
       <Stack
