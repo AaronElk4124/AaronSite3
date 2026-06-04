@@ -1,8 +1,9 @@
-import React from "react";
-import { AboutPageContent } from "@/content/AboutPageContent";
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-const IndexPage = async () => {
-  return <AboutPageContent />;
-};
-
-export default IndexPage;
+export default function AboutPage() {
+  const router = useRouter()
+  useEffect(() => { router.replace('/') }, [router])
+  return null
+}

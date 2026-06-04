@@ -1,9 +1,9 @@
-import React from "react";
-import { PhilanthropyPageContent } from "@/contentPhilanthropyPageContent";
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-const IndexPage = async () => {
-  return <PhilanthropyPageContent />;
-};
-
-export default IndexPage;
-
+export default function PhilanthropyPage() {
+  const router = useRouter()
+  useEffect(() => { router.replace('/') }, [router])
+  return null
+}

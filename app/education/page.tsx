@@ -1,8 +1,9 @@
-import { EducationPageContent } from "@/contentEducationPageContent";
-import React from "react";
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-const IndexPage = async () => {
-  return <EducationPageContent />;
-};
-
-export default IndexPage;
+export default function EducationPage() {
+  const router = useRouter()
+  useEffect(() => { router.replace('/') }, [router])
+  return null
+}

@@ -1,8 +1,9 @@
-import { HobbiesPageContent } from "@/contentHobbiesPageContent";
-import React from "react";
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-const IndexPage = async () => {
-  return <HobbiesPageContent />;
-};
-
-export default IndexPage;
+export default function HobbiesPage() {
+  const router = useRouter()
+  useEffect(() => { router.replace('/') }, [router])
+  return null
+}
