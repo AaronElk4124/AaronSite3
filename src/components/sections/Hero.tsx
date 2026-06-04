@@ -14,7 +14,7 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center pt-16">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F0A07] via-background to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1A1525] via-background to-background" />
       <div
         className="absolute inset-0 opacity-[0.07]"
         style={{

@@ -8,11 +8,12 @@ import {
 const currently = [
   {
     label: "Shipping",
-    value: "Real-time job listings pipeline for Ilitch companies",
+    value:
+      "New systems from scratch, shipped fast — the kind of work where the spec doesn't exist yet",
   },
   {
     label: "Studying",
-    value: "MS Computer Science at Johns Hopkins — entering my third semester",
+    value: "MS Computer Science at Johns Hopkins with a specialization in AI",
   },
   {
     label: "Thinking about",
